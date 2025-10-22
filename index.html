@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TikTok Acessível</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      /* Barra lateral esquerda */
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .sidebar button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .sidebar button:first-child {
+        background: #e5e5e5;
+        font-weight: bold;
+      }
+
+      /* Conteúdo principal */
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .content img {
+        width: 300px;
+        border-radius: 12px;
+      }
+
+      .caption {
+        border: 1px solid #ccc;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #fff;
+      }
+
+      /* Barra lateral direita */
+      .sidebar-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .sidebar-right button {
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background: #fff;
+        cursor: pointer;
+      }
+
+      .top-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Barra lateral esquerda -->
+    <div class="sidebar">
+      <button>🏠 Início</button>
+      <button>🔍 Explorar</button>
+      <button>👥 Seguindo</button>
+      <button>💬 Mensagens</button>
+      <button>⭐ Favorito</button>
+      <button>✌️ Tendências</button>
+      <button>⚙️ Configurações</button>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9K2YNoO2aZE-_jzvdGiDklu0XlA6XHd1mhA&s"
+        alt="Vídeo"
+      />
+      <div class="caption">SAI DA FRENTE...</div>
+    </div>
+
+    <!-- Barra lateral direita -->
+    <div class="sidebar-right">
+      <div class="top-options">
+        <button>⏰ Sons automáticos</button>
+        <button>▶️ Autoplay</button>
+        <button>❄️ Modo escuro</button>
+      </div>
+      <button>🤍 Curtir</button>
+      <button>💬 Comentários</button>
+      <button>📤 Compartilhar</button>
+    </div>
+  </body>
+</html>
