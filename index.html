@@ -3,36 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TikTok Acessível</title>
+    <title>TikTok Acessível (Relativo e Responsivo)</title>
     <style>
-      body {
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: Arial, sans-serif;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
       }
 
-      /* Barra lateral esquerda */
-      .sidebar {
+      body {
+        background: #fff;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 2vh;
+        padding: 2vh 4vw;
+        min-height: 100vh;
+      }
+
+      /* Barra superior */
+      .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1vw;
+        width: 100%;
+        background: #fff;
+        border-bottom: 0.2vh solid #ddd;
+        padding-bottom: 1vh;
       }
 
       .sidebar button {
+        flex: 1 1 20%;
+        min-width: 90px;
         display: flex;
         align-items: center;
-        gap: 8px;
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 1em;
+        font-size: 1rem;
+        border-radius: 0.6em;
+        border: 0.1em solid #ccc;
         background: #fff;
         cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .sidebar button:hover {
+        background: #f1f1f1;
       }
 
       .sidebar button:first-child {
@@ -45,48 +64,96 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 2vh;
+        width: 100%;
+        max-width: 80vw;
       }
 
       .content img {
-        width: 300px;
-        border-radius: 12px;
+        width: 90%;
+        max-width: 60vw;
+        border-radius: 1em;
+        object-fit: cover;
       }
 
       .caption {
-        border: 1px solid #ccc;
-        padding: 8px 16px;
-        border-radius: 8px;
-        font-size: 14px;
+        border: 0.1em solid #ccc;
+        padding: 1em 2em;
+        border-radius: 0.8em;
+        font-size: 1rem;
         background: #fff;
+        text-align: center;
+        width: 80%;
       }
 
-      /* Barra lateral direita */
+      /* Rodapé */
       .sidebar-right {
         display: flex;
         flex-direction: column;
-        gap: 10px;
-      }
-
-      .sidebar-right button {
-        padding: 12px 20px;
-        font-size: 16px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        background: #fff;
-        cursor: pointer;
+        align-items: center;
+        gap: 1vh;
+        width: 100%;
+        padding-top: 1vh;
+        border-top: 0.2vh solid #ddd;
       }
 
       .top-options {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1vw;
+        width: 100%;
+      }
+
+      .sidebar-right button {
+        flex: 1 1 20%;
+        min-width: 90px;
+        padding: 1em;
+        font-size: 1rem;
+        border-radius: 0.6em;
+        border: 0.1em solid #ccc;
+        background: #fff;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      .sidebar-right button:hover {
+        background: #f1f1f1;
+      }
+
+      /* Responsividade geral */
+      @media (max-width: 700px) {
+        body {
+          padding: 2vh;
+        }
+
+        .sidebar button,
+        .sidebar-right button {
+          flex: 1 1 45%;
+          font-size: 0.9rem;
+        }
+
+        .content img {
+          max-width: 90vw;
+        }
+
+        .caption {
+          width: 90%;
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        body {
+          max-width: 700px;
+          margin: auto;
+        }
       }
     </style>
   </head>
+
   <body>
-    <!-- Barra lateral esquerda -->
+    <!-- Barra superior -->
     <div class="sidebar">
       <button>🏠 Início</button>
       <button>🔍 Explorar</button>
@@ -97,7 +164,7 @@
       <button>⚙️ Configurações</button>
     </div>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo -->
     <div class="content">
       <img
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9K2YNoO2aZE-_jzvdGiDklu0XlA6XHd1mhA&s"
@@ -106,7 +173,7 @@
       <div class="caption">SAI DA FRENTE...</div>
     </div>
 
-    <!-- Barra lateral direita -->
+    <!-- Rodapé -->
     <div class="sidebar-right">
       <div class="top-options">
         <button>⏰ Sons automáticos</button>
